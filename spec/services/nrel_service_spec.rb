@@ -14,6 +14,7 @@ describe NrelService do
         expect(station.keys).to include(:fuel_type_code)
         expect(station.keys).to include(:street_address)
         expect(station.keys).to include(:station_name)
+        expect(station.keys).to include(:distance)
         expect(station.keys).to include(:access_days_time)
       end
     end
