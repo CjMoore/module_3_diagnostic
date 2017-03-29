@@ -6,10 +6,10 @@ class Station
               :access_times
 
   def initialize(data)
-    @name = data[:name]
-    @address = data[:address]
+    @name = data[:station_name]
+    @address = data[:street_address]
     @fuel_types = data[:fuel_type_code]
-    @access_times = data[:access_times]
+    @access_times = data[:access_days_time]
   end
 
   def self.find_nearest_stations(location)

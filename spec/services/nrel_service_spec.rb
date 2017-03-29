@@ -11,7 +11,6 @@ describe NrelService do
         station = stations.first
 
         expect(stations.count).to eq(10)
-        # expect(station[:fuel_type_code]).to eq("ELEC")
         expect(station.keys).to include(:fuel_type_code)
         expect(station.keys).to include(:street_address)
         expect(station.keys).to include(:station_name)
