@@ -8,11 +8,13 @@ describe "when user visits root" do
   end
 
   it "they are able to fill out a search bar and click submit" do
-    visit root_path
+    VCR.use_cassette("services/search_response") do      
+      visit root_path
 
-    fill_in("search", :with => "80203")
-    click_on("Search")
+      fill_in("search", :with => "80203")
+      click_on("Search")
 
-    expect(current_path).to eq(search_path)
+      expect(current_path).to eq(search_path)
+    end
   end
 end

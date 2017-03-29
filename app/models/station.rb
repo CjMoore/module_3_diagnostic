@@ -14,7 +14,7 @@ class Station
 
   def self.find_nearest_stations(location)
     serv = NrelService.new
-    serv.find_stations.map do |station_data|
+    serv.find_stations(location).map do |station_data|
       Station.new(station_data)
     end
   end
