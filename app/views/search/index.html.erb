@@ -1,0 +1,27 @@
+
+
+<div class="container">
+  <h3>Stations</h3>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Fuel Types</th>
+        <th>Access Times</th>
+        <th>Distance</th>
+      </tr>
+    </thead>
+    <%= sort_distance(@stations).each do |station| %>
+    <tbody>
+      <tr>
+        <td><%= station.name %></td>
+        <td><%= station.address %></td>
+        <td><%= station.fuel_type %></td>
+        <td><%= station.access_times %></td>
+        <td><%= station.distance %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
