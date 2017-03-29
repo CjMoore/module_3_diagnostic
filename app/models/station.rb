@@ -14,7 +14,7 @@ class Station
 
   def self.find_nearest_stations(location)
     serv = NrelService.new
-
+    
   end
 
 end
