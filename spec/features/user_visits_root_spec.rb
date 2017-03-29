@@ -1,18 +1,12 @@
 require "rails_helper"
 
 describe "when user visits root" do
-  it "they see a welcome message" do
-    visit root_path
-
-    expect(page).to have_content("Welcome")
-  end
-
   it "they are able to fill out a search bar and click submit" do
-    VCR.use_cassette("services/search_response") do      
+    VCR.use_cassette("services/search_response") do
       visit root_path
 
-      fill_in("search", :with => "80203")
-      click_on("Search")
+      fill_in("q", :with => "80203")
+      click_on("Locate")
 
       expect(current_path).to eq(search_path)
     end

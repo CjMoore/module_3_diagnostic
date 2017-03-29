@@ -5,8 +5,8 @@ describe "when user searches with zip" do
     VCR.use_cassette("services/search_response") do
       visit root_path
 
-      fill_in("search", :with => "80203")
-      click_on("Search")
+      fill_in("q", :with => "80203")
+      click_on("Locate")
 
       expect(current_path).to eq(search_path)
     end
