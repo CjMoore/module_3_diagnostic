@@ -13,15 +13,16 @@
         <th>Distance</th>
       </tr>
     </thead>
-    <%= sort_distance(@stations).each do |station| %>
+    <% sort_distance(@stations).each do |station| %>
     <tbody>
       <tr>
         <td><%= station.name %></td>
         <td><%= station.address %></td>
-        <td><%= station.fuel_type %></td>
+        <td><%= station.fuel_types %></td>
         <td><%= station.access_times %></td>
         <td><%= station.distance %></td>
       </tr>
     </tbody>
+    <% end %>
   </table>
 </div>

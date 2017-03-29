@@ -12,5 +12,11 @@ describe "when user searches with zip" do
     end
 
     expect(page).to have_content("Stations")
+
+    within("table") do
+      expect(page).to have_content("Name")
+      expect(page).to have_content("UDR")
+      expect(page).to have_content("Tremont Street Garage")
+    end
   end
 end
