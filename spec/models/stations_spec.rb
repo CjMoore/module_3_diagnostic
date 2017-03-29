@@ -17,7 +17,7 @@ describe Station do
 
       location = "80203"
 
-      allow.(NrelService).to recieve(:find_stations).and_return(stations)
+      NrelService.any_instance.stub(:find_stations).and_return(stations)
 
       returned_stations = Station.find_nearest_stations(location)
 
